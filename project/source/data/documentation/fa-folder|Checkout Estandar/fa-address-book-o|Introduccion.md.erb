@@ -1,0 +1,31 @@
+# <%= I18n.t("standard_checkout.introduction") %> #
+## <%= I18n.t("standard_checkout.standard") %> ##
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, orci in iaculis dignissim, sapien neque egestas nulla, ac imperdiet arcu ipsum in nisi. Ut et tempus metus. Nulla in gravida nunc. Maecenas consequat sagittis blandit. Etiam commodo, massa eu efficitur ullamcorper, nisl turpis dictum enim, vitae tincidunt ligula eros sed sem. Vestibulum pharetra scelerisque est id semper. Sed placerat, urna sed tempor commodo, velit tellus laoreet orci, nec interdum odio orci quis odio.
+
+**Flujo**
+
+![flow](images/flow.png)
+
+### Crear una Preferencia ###
+
+```Java
+  MPConf.setClientId("6295877106812064");
+  MPConf.setClientSecret("N8h64ko1SbY2ucyZVmOMyBJN1B82ajZp");
+
+  Preferences preference = new Preferences();
+
+  Item item = new Item();
+  Payer payer = new Payer();
+
+  item.setId("1234")
+      .setUnitPrice((float) 14.5)
+      .setQuantity(2)
+      .setCategoryId("ARS");
+
+  payer.setEmail("demo@mail.com")
+       .setName("Juan");
+
+  preference.setPayer(payer);
+  preference.appendItem(item);
+```

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Backend SDK Java" %></title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/c3b1d8f3d6.js"></script>
+
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+  </head>
+
+  <body class="<%= page_classes %>">
+      <div class="right-bar">
+        <center><img src="images/mp_developers_logo.png"/></center>
+        <ul>
+          <%= make_a_file_hierarchy("#{Dir.pwd}/source/data/documentation") %>
+        </ul>
+      </div>
+      <div class ="container-yield">
+        <%= yield %>
+      </div>
+
+  </body>
+</html>
